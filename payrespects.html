@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pay respects</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript">
+		var b;
+		document.onkeypress=function (a) {if(a.key=="f")payRespects();};
+		function payRespects () {
+			alert("You have paid respects.");
+		}
+	</script>
+</head>
+<body>
+	<div class="header">
+		<h1>Pay Respects</h1>
+		<p>
+			<a href="index.html">Return to Index</a>
+		</p>
+		<br>
+	</div>
+	<div style="text-align: center">
+		<p>
+			Press F to pay respects
+		</p>
+		<input type="button" value="F" onclick="payRespects();">
+	</div>
+
+</body>
+</html>
