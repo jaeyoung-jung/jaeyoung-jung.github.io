@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<title>Pay Respects</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script type="text/javascript">
@@ -24,6 +25,11 @@
 			Press F to pay respects
 		</p>
 		<input type="button" value="F" onclick="payRespects();">
+		<script type="text/javascript">
+			if (window.location.href.split("?")[1]=="fpressed") {
+				payRespects();
+			}
+		</script>
 	</div>
 
 </body>
