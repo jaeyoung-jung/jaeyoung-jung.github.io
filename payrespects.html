@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Pay Respects</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript">
+		var b;
+		document.onkeypress=function (a) {if(a.key=="f")payRespects();};
+		function payRespects () {
+			alert("You have paid respects.");
+			var xhttp=new XMLHttpRequest();
+			xhttp.onreadystatechange=function(){}
+			xhttp.open("GET","respectspaid.php",true);
+			xhttp.send();
+			setTimeout(updateRespects,500);
+		}
+		function updateRespects(){
+			var ajax=new XMLHttpRequest();
+			ajax.onreadystatechange=function(){
+				if(this.readyState==4&&this.status==200){
+					document.getElementById("respectsCount").innerHTML=this.responseText;
+					console.log(this.responseText);
+				}
+			};
+			ajax.open("GET","respects.txt",true);
+			ajax.send();
+		}
+		window.onload=updateRespects;
+	</script>
+</head>
+<body>
+	<div class="header">
+		<h1>Pay Respects</h1>
+		<p>
+			<a href="index.html">Return to Index</a>
+		</p>
+		<br>
+	</div>
+	<div style="text-align: center">
+		<p>
+			Press F to pay respects
+		</p>
+		<input type="button" value="F" onclick="payRespects();">
+		<script type="text/javascript">
+			if (window.location.href.split("?")[1]=="fpressed") {
+				payRespects();
+			}
+		</script>
+	<p>Respects paid: <span id="respectsCount">0</span></p>
+	</div>
+
+</body>
+</html>
