@@ -20,9 +20,6 @@
 		Welcome to my website. As the title of this website may suggest, my name is Jaeyoung Jung. Web design is my passion. This website uses PHP now.
 	</p>
 	<br>
-	<hr>
-	<p>
-		<i>Copyright &copy; <?php echo date("Y")?> Jaeyoung Jung</i>
-	</p>
-</body>
-</html>
+<?php
+include "footer.php"
+?>
