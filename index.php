@@ -11,6 +11,7 @@
 		<p>
 			<a href="pong/pong.html">Play pong</a> |
 			<a href="payrespects.html">Pay Respects</a> |
+			<a href="blog.php">Weblog</a> |
 			<a href="https://twitter.com/j43y0ung">Twitter</a> | 
 			<a href="https://github.com/jaeyoung-jung">GitHub</a>
 		</p>
