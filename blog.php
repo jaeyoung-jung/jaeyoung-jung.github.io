@@ -10,7 +10,7 @@ while(($line=fgetcsv($blog_file))!==false){
 }
 fclose($blog_file);
 $is_entry=false;
-if($_GET["id"]!==null){
+if(isset($blog_content_array[$_GET["id"]])){
 	$is_entry=true;
 	$id=$_GET["id"];
 }
