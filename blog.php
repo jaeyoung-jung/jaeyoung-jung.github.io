@@ -15,13 +15,6 @@ if(isset($blog_content_array[$_GET["id"]])){
 	$id=$_GET["id"];
 }
 
-function print_entry($index,$entry){
-	echo "<p><h3><a href=\"blog.php?id=$index\">$entry[0]</a></h5>\n";
-        echo "<i>by $entry[1]<br>\n";
-        echo "Posted on ".date("Y-m-d G:i",$entry[2])."<br></i></p>\n";
-        echo "<p>$entry[3]<br></p>\n";
-}
-
 ?>
 
 <!doctype html>
@@ -39,16 +32,15 @@ function print_entry($index,$entry){
 		</div>
 		<?php
 			if($is_entry){
-//				print_entry($id,$blog_content_array[$id]);
 			        echo "<p><h2>".$blog_content_array[$id][0]."</h2>\n";
-                                echo "<i>by ".$blog_content_array[$id][1]."<br>\n";
-                                echo "Posted on ".date("Y-m-d G:i",$blog_content_array[$id][2])."<br></i></p>\n";
-                                echo "<p>".$blog_content_array[$id][3]."<br></p>\n";
+                    echo "<i>by ".$blog_content_array[$id][1]."<br>\n";
+                    echo "Posted on ".date("Y-m-d G:i",$blog_content_array[$id][2])."<br></i></p>\n";
+                    echo "<p>".$blog_content_array[$id][3]."<br></p>\n";
 
-			} else{
+			}else{
 				$index=count($blog_content_array);
-				while($index) {
-					$index--;
+				while($index){
+						$index--;
 				        echo "<p><h3><a href=\"blog.php?id=$index\">".$blog_content_array[$index][0]."</a></h3>\n";
 				        echo "<i>by ".$blog_content_array[$index][1]."<br>\n";
 				        echo "Posted on ".date("Y-m-d G:i",$blog_content_array[$index][2])."<br></i></p>\n";
