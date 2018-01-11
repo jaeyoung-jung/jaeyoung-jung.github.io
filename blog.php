@@ -28,7 +28,7 @@ if(isset($blog_content_array[$_GET["id"]])){
 		<div class="header">
 			<h1>Weblog</h1>
 			<p><a href="index.php">Return to Index</a>
-			<?php if($is_entry){?> | <a href="blog.php">Return to Weblog</a><?php;}?></p>
+			<?php if($is_entry){ ?> | <a href="blog.php">Return to Weblog</a><?php ;}?></p>
 		</div>
 		<?php
 			if($is_entry){
