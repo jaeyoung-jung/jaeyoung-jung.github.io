@@ -22,7 +22,7 @@ if(isset($blog_content_array[$_GET["id"]])){
 	<head>
 		<title><?php if($is_entry){echo $blog_content_array[$id][0]." - ";}?>Weblog</title>
 		<meta charset="UTF-8">
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="../style.css">
 	</head>
 	<body>
 		<div class="header">
@@ -54,5 +54,5 @@ if(isset($blog_content_array[$_GET["id"]])){
 			}
 		?>
 <?php
-include "footer.php";
+include "../footer.php";
 ?>
